@@ -8,13 +8,12 @@
     <h1>Hello Sergey</h1>
 </body>
 <script>
-    if (['www.pomar.lol', 'pomar.lol'].includes(window.location.hostname)) {
-        let ws;
-        const proto = window.location.protocol === 'https' ? 'wss' : 'ws'
-        if (window)
-            ws = new WebSocket(`${proto}://${window.location.host}`);
+    let ws;
+    const proto = window.location.protocol === 'https' ? 'wss' : 'ws'
+    if (window)
+        ws = new WebSocket(`${proto}://${window.location.host}`);
 
-        ws.onmessage = (event) => {console.log(event.data)};
-    }
+    ws.onmessage = (event) => {console.log(event.data)};
+
 </script>
 </html>
