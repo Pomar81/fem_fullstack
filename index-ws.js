@@ -18,7 +18,6 @@ const WebSocketServer = require('ws').Server;
 const wss = new WebSocketServer({server: server});
 wss.on('close', () => {console.log('wss is closed')})
 process.on('SIGINT', () => {
-    wss.close()
     wss.clients.forEach(function each(client) {
         client.close();
     });
