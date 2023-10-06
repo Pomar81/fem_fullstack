@@ -8,7 +8,7 @@
     <h1>Hello Sergey</h1>
 </body>
 <script>
-    if (window.location.hostname === 'pomar.lol') {
+    if (['www.pomar.lol', 'pomar.lol'].includes(window.location.hostname)) {
         let ws;
         const proto = window.location.protocol === 'https' ? 'wss' : 'ws'
         if (window)
